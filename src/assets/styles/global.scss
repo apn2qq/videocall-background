@@ -1,0 +1,88 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: normal;
+  font-style: normal;
+
+  background-color: #18171d;
+}
+
+.container {
+  width: 100%;
+  // max-width: 1144px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5vmin;
+  padding-right: 5vmin;
+}
+
+.backgrounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 2.5rem;
+
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.background {
+  background-color: transparent;
+  border: none;
+
+  img {
+    display: block;
+    height: 35vmin;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.loaded {
+  img {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.hero {
+  padding-top: 14vmin;
+  padding-bottom: 14vmin;
+}
+
+.title {
+  font-size: 9vmin;
+  color: #4eeba9;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.description {
+  color: #fff;
+  font-size: 7vmin;
+  font-weight: 500;
+}
+
+.download {
+  all: unset;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
